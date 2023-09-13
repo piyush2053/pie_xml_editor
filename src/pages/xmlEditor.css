@@ -1,0 +1,116 @@
+/* Default styles for larger screens */
+.elevated-sheet {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 50px rgba(12, 98, 218, 0.2); /* Evenly distributed shadow */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 30px;
+  display: flex;
+  min-height: 75vh; 
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.elevated-sheet-content {
+  flex-grow: 1; 
+  outline: none;
+  overflow: auto; 
+}
+
+/* Style for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.submit-button:hover {
+  background-color: #55a5fa;
+}
+
+/* Style for the logo on the left */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.elevated-sheet-content:focus {
+  outline-color: transparent;
+}
+
+/* Style for the submit button on the right */
+.submit-button {
+  background-color: #ffffff;
+  color: #007BFF;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* loader.css */
+.loader {
+  border: 6px dotted #007BFF;
+  border-top: 6px dotted transparent;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: rotate 1.5s linear infinite;
+  position: relative;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Responsive styles for smaller screens (e.g., tablets) */
+@media (max-width: 768px) {
+  .elevated-sheet {
+    /* Adjust styles for the elevated-sheet on smaller screens */
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+  }
+
+  .navbar {
+    /* Adjust styles for the navbar on smaller screens */
+  }
+
+  .logo {
+    /* Adjust styles for the logo on smaller screens */
+  }
+
+  .submit-button {
+    /* Adjust styles for the submit button on smaller screens */
+  }
+}
+
+/* Responsive styles for even smaller screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .elevated-sheet {
+    /* Further adjust styles for the elevated-sheet on mobile screens */
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  .navbar {
+    /* Further adjust styles for the navbar on mobile screens */
+  }
+
+  .logo {
+    /* Further adjust styles for the logo on mobile screens */
+  }
+
+  .submit-button {
+    /* Further adjust styles for the submit button on mobile screens */
+  }
+}
