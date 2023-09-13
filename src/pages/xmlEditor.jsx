@@ -51,7 +51,7 @@ const XmlEditor = ({ children }) => {
     minHeight: "69.5vh",
     flexDirection: "column",
     minWidth: "300px",
-    border: isDottedBorder ? "4px dotted #99c8fa" : "none", // Apply dotted border if isDottedBorder is true
+    border: isDottedBorder ? "4px dashed #99c8fa" : "none", // Apply dotted border if isDottedBorder is true
   };
 
   const footerStyle = {
