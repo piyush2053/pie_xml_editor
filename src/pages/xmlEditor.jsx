@@ -16,7 +16,7 @@ const XmlEditor = ({ children }) => {
         promptShown.current = true;
         setTimeout(() => {
           setIsLoading(false); // Hide loader after 3 seconds (adjust as needed)
-        }, 3000);
+        }, 1000);
       } else {
         alert("Please enter something!");
       }
@@ -65,14 +65,14 @@ const XmlEditor = ({ children }) => {
     display: isLoading ? "flex" : "none",
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "column", // Added to stack loading text beneath loader
+    flexDirection: "column",
   };
 
   return (
     <>
       <div className="navbar">
         <div className="logo">Pie XML editor</div>
-        <button className="submit-button" onClick={() => alert(xmlContent)}>SUBMIT</button>
+        <button className="submit-button" onClick={() => alert(`Saved Content-:\n${xmlContent}`)}>Save Document</button>
       </div>
 
       <div

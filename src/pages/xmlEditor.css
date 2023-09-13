@@ -25,13 +25,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #007BFF;
+  background-color: #1c528bdd;
   color: #fff;
   padding: 10px 20px;
 }
 
 .submit-button:hover {
-  background-color: #55a5fa;
+  background-color: #356191dd;
 }
 
 /* Style for the logo on the left */
@@ -46,8 +46,8 @@
 
 /* Style for the submit button on the right */
 .submit-button {
-  background-color: #ffffff;
-  color: #007BFF;
+  background-color: #1c528bdd;
+  color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding: 10px 20px;
   border: none;
