@@ -64,6 +64,15 @@
   animation: rotate 1.5s linear infinite;
   position: relative;
 }
+.loader2 {
+  border: 2px dotted #ffffff;
+  border-top: 2px dotted transparent;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: rotate 1.5s linear infinite;
+  position: relative;
+}
 
 @keyframes rotate {
   0% { transform: rotate(0deg); }
