@@ -8,7 +8,8 @@ const XmlEditor = ({ children }) => {
   const promptShown = useRef(false);
   const [isDottedBorder, setIsDottedBorder] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(false); // State to control sidebar visibility
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [isSaving, setIsSaving] = useState(false); // State to control sidebar visibility
 
   useEffect(() => {
     if (!promptShown.current) {
@@ -37,14 +38,20 @@ const XmlEditor = ({ children }) => {
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };
-
+  const handleSaveDocument = () => {
+    setIsSaving(true);
+    setTimeout(() => {
+      setIsSaving(false); 
+      alert(`Saved Content-:${xmlContent}`);
+    }, 1000); 
+  };
   const elevatedSheetStyle = {
     backgroundColor: "#fff",
     borderRadius: "8px",
     boxShadow: "0px 0px 50px rgba(12, 98, 218, 0.2)",
     marginTop: "20px",
     marginBottom: "20px",
-    marginLeft: showSidebar ? "250px" : "200px", // Adjust marginLeft based on sidebar visibility
+    marginLeft: showSidebar ? "250px" : "200px",
     marginRight: "200px",
     padding: "30px",
     display: "flex",
@@ -121,10 +128,15 @@ const XmlEditor = ({ children }) => {
           style={sidebarButtonStyle}
           onClick={toggleSidebar}
         >
-          {/* Use the cancel icon when the sidebar is open */}
           <FontAwesomeIcon icon={showSidebar ? faTimes : faLightbulb} style={bulbIconStyle} /> {showSidebar ? "Close" : "Shortcuts"}
         </button>
-        <button className="submit-button" onClick={() => alert(`Saved Content-:${xmlContent}`)}>Save Document</button>
+        <button className="submit-button" onClick={handleSaveDocument}>
+        {isSaving ? (
+          <div className="loader2"></div>
+        ) : (
+          "Save Document"
+        )}
+        </button>
       </div>
 
       <div style={sidebarStyle}>
